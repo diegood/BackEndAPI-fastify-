@@ -1,0 +1,9 @@
+{
+    "tags": ["Payments"],
+    "summary": "Sign payment",
+    "params": {
+        "requestid": {
+            "type": "string"
+        }
+    }
+}

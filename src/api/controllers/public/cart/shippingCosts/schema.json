@@ -1,0 +1,49 @@
+{
+    "tags": ["Cart"],
+    "summary": "Calculate cart shipping costs",
+    "params": {
+        "cartId": {
+            "type": "string",
+            "example": "096e998b-7613-4828-aafa-5787b4e1b05d"
+        }
+    },
+    "response": {
+        "200": {
+            "type": "object",
+            "properties": {
+                "cartTotal": { "type": "number"},
+                "storeOrders": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "storeId": { "type": "string"},
+                            "storeName": { "type": "string"},
+                            "logisticType": { "type": "string"},
+                            "orderTotal": { "type": "number"},
+                            "shippingCost": { "type": "number"},
+                            "orderTotalWithShipping": { "type": "number"}
+                        }
+                    }
+                }
+            }
+        },
+        "500": {
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "type": "number",
+                    "example": 500
+                },
+                "error":  {
+                    "type": "string",
+                    "example": "internalServerError"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "INTERNAL_SERVER_ERROR"
+                }
+            }
+        }  
+    }
+}

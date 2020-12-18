@@ -1,0 +1,89 @@
+{
+    "tags": ["Users"],
+    "security": [{
+        "appToken": []
+    }],
+    "summary": "Get all User request",
+    "response": {
+        "200" :{
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "example": "ba160a8a-c137-46e0-b9f7-d6ae66cdb7be"
+                    },
+                    "userId": {
+                        "type": "string",
+                        "example": "6d38c81e-f454-4ef2-8358-a1c541da896c"
+                    },
+                    "status": {
+                        "type": "string",
+                        "example": "new"
+                    },
+                    "retainedPrice": {
+                        "type": "string",
+                        "example": "5.5"
+                    },
+                    "realPrice": {
+                        "type": "string",
+                        "example": "5"
+                    },
+                    "creationDate": {
+                        "type": "string",
+                        "example": "2020-08-06T20:10:34.313Z"
+                    },
+                    "updatedDate": {
+                        "type": "string",
+                        "example": "2020-08-06T20:10:34.313Z"
+                    },
+                    "orders": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "string",
+                                    "example": "3acd0440-40f7-4169-b144-8dd65c671892"
+                                },
+                                "storeId": {
+                                    "type": "string",
+                                    "example": "b9e54e29-b016-4919-beee-1663bb605044"
+                                },
+                                "addressId": {
+                                    "type": "string",
+                                    "example": "362dde95-f1cd-4dc9-80a2-f4d375a594ed"
+                                },
+                                "requestId": {
+                                    "type": "string",
+                                    "example": "ba160a8a-c137-46e0-b9f7-d6ae66cdb7be"
+                                },
+                                "status": {
+                                    "type": "string",
+                                    "example": "new"
+                                },
+                                "logisticType": {
+                                    "type": "string",
+                                    "example": "pickup"
+                                },
+                                "retainedPrice": {
+                                    "type": "string",
+                                    "example": "5"
+                                },
+                                "creationDate": {
+                                    "type": "string",
+                                    "example": "2020-08-06T20:10:34.547Z"
+                                },
+                                "updatedDate": {
+                                    "type": "string",
+                                    "example": "2020-08-06T20:10:34.547Z"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

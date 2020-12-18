@@ -1,0 +1,11 @@
+{
+    "tags": ["Products"],
+    "summary": "Get Products by Product uriName",
+    "params": {
+        "uriName": {
+            "$id": "#/properties/uriName",
+            "type": "string",
+            "example": "sardinas"
+        }
+    }
+}

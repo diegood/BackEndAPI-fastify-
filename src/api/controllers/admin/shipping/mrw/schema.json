@@ -1,0 +1,174 @@
+{
+    "tags": ["Shipping"],
+    "summary": "Send request to MRW to ship package",
+    "body": {
+        "properties": {
+            "store": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "type": "object",
+                        "properties": {
+                            "streetType": {
+                                "type": "string",
+                                "example": "CALLE"
+                            },
+                            "streetName": {
+                                "type": "string",
+                                "example": "Aristófanes"
+                            },
+                            "streetNumber": {
+                                "type": "number",
+                                "example": 190
+                            },
+                            "extra": {
+                                "type": "string",
+                                "example": "Retiro de pedidos por ventanilla especial"
+                            },
+                            "postalCode": {
+                                "type": "string",
+                                "example": "29010"
+                            },
+                            "locality": {
+                                "type": "string",
+                                "example": "MALAGA"
+                            },
+                            "province": {
+                                "type": "string",
+                                "example": "MALAGA"
+                            }
+                        }
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "PESCADERIA EL TRASMALLO"
+                    },
+                    "phoneNumber": {
+                        "type": "string",
+                        "example": "34651088644"
+                    },
+                    "bussinesHoursFrom": {
+                        "type": "string",
+                        "example": "11:00"
+                    },
+                    "bussinesHoursTo": {
+                        "type": "string",
+                        "example": "13:00"
+                    }
+                }
+            },
+            "user": {
+                "type": "object",
+                "properties": {
+                    "address": {
+                        "type": "object",
+                        "properties": {
+                            "streetType": {
+                                "type": "string",
+                                "example": "CALLE"
+                            },
+                            "streetName": {
+                                "type": "string",
+                                "example": "MESON"
+                            },
+                            "streetNumber": {
+                                "type": "number",
+                                "example": 96
+                            },
+                            "extra": {
+                                "type": "string",
+                                "example": "Piso 3, Apartamento 2A"
+                            },
+                            "postalCode": {
+                                "type": "string",
+                                "example": "29567"
+                            },
+                            "locality": {
+                                "type": "string",
+                                "example": "MALAGA"
+                            },
+                            "province": {
+                                "type": "string",
+                                "example": "MALAGA"
+                            }
+                        }
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "Jose ruben Perez"
+                    },
+                    "phoneNumber": {
+                        "type": "string",
+                        "example": "34966990366"
+                    }
+                }
+            },
+            "order": {
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "type": "string",
+                        "example": "29/08/2020"
+                    },
+                    "number": {
+                        "type": "string",
+                        "example": "765345563533"
+                    },
+                    "weight": {
+                        "type": "number",
+                        "example": 5
+                    }
+                }
+            }
+        }
+    },
+    "response": {
+        "200": {
+            "type": "object",
+            "properties": {
+                "TransmEnvioResult": {
+                    "type": "object",
+                    "properties": {
+                        "Estado": {
+                            "type": "string",
+                            "example": "1"
+                        },
+                        "Mensaje": {
+                            "type": "string",
+                            "example": "1) La fecha de recogida solicitada es 29/08/2020."
+                        },
+                        "NumeroSolicitud": { 
+                            "type": "string",
+                            "example": "0271500260020200727015922486"
+                        },
+                        "NumeroEnvio": {
+                            "type": "string",
+                            "example": "027200000276"
+                        },
+                        "Url": {
+                            "type": "string",
+                            "example": "http://sagec-test.mrw.es/Panel.aspx"
+                        }
+                    }
+                }
+            }
+        },
+        "500": {
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "type": "number",
+                    "example": 500
+                },
+                "error":  {
+                    "type": "string",
+                    "example": "internalServerError"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "INTERNAL_SERVER_ERROR"
+                }
+            }
+        }  
+    }
+}

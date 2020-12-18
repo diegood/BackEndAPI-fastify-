@@ -1,0 +1,63 @@
+{
+  "name": "fish-mkt",
+  "version": "1.0.0",
+  "description": "fish market api",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "pretest": "standard",
+    "test": "tap test/**/*.test.js",
+    "start": "fastify start -l info app.js -a 0.0.0.0",
+    "dev": "fastify start -w -l info -P app.js",
+    "generate_models": "node autoGenerateModels.js",
+    "lint": "standard --fix",
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.12",
+    "@mailchimp/mailchimp_transactional": "^1.0.13",
+    "aws-sdk": "^2.720.0",
+    "bcrypt": "~5.0.0",
+    "decimal.js": "^10.2.0",
+    "fastify": "~2.0.0",
+    "fastify-autoload": "~1.0.0",
+    "fastify-cli": "~1.5.0",
+    "fastify-cors": "~3.0.3",
+    "fastify-env": "~1.0.1",
+    "fastify-file-upload": "^2.1.0",
+    "fastify-formbody": "^3.2.0",
+    "fastify-healthcheck": "~2.3.1",
+    "fastify-helmet": "~3.0.2",
+    "fastify-jwt": "~1.4.0",
+    "fastify-metrics": "~5.0.1",
+    "fastify-oas": "^2.7.1",
+    "fastify-oauth2": "3.3.0",
+    "fastify-plugin": "~1.6.1",
+    "fastify-rate-limit": "~3.0.1",
+    "fastify-sensible": "~2.1.1",
+    "form-data": "^3.0.0",
+    "md5": "^2.3.0",
+    "node-fetch": "^2.6.0",
+    "node-redsys-api": "0.0.5",
+    "pg": "~8.2.1",
+    "pg-hstore": "~2.3.3",
+    "sequelize": "~5.21.9",
+    "simple-get": "~4.0.0",
+    "soap": "~0.32.0",
+    "speakingurl": "^14.0.1",
+    "sqs-consumer": "^5.4.0",
+    "uuid": "^8.2.0"
+  },
+  "devDependencies": {
+    "sequelize-auto": "^0.5.2",
+    "dotenv": "^8.2.0",
+    "jsdoc": "~3.6.4",
+    "standard": "~14.3.4",
+    "tap": "~12.5.3"
+  }
+}

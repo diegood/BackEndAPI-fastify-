@@ -1,0 +1,101 @@
+{
+    "tags": ["Products"],
+    "summary": "Get All products filters",
+    "response": {
+        "200": {
+            "type": "object",
+            "properties": {
+                "formOfBreeding": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "number",
+                                "example": 1
+                            },
+                            "name": {
+                                "type": "string",
+                                "example": "salvaje"
+                            },
+                            "key": {
+                                "type": "string",
+                                "example": "wild"
+                            }
+                        }
+                    }
+                },
+                "preparation": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "number",
+                                "example": 1
+                            },
+                            "name": {
+                                "type": "string",
+                                "example": "al horno"
+                            },
+                            "key": {
+                                "type": "string",
+                                "example": "baked"
+                            }
+                        }
+                    }
+                },
+                "categories": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "example": "422bfc0c-f8d8-4028-865c-96d0a30dbb92"
+                            },
+                            "name": {
+                                "type": "string",
+                                "example": "seafood"
+                            },
+                            "subcategories": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "string",
+                                            "example": "a166dd94-446a-41e9-9bff-71b8cbb3c214"
+                                        },
+                                        "name": {
+                                            "type": "string",
+                                            "example": "fresh_seafood"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "500": {
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "type": "number",
+                    "example": 500
+                },
+                "error":  {
+                    "type": "string",
+                    "example": "internalServerError"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "INTERNAL_SERVER_ERROR"
+                }
+            }
+        }  
+    }
+
+}

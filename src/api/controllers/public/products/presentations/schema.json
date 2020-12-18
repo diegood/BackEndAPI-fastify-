@@ -1,0 +1,26 @@
+{
+    "tags": ["Products"],
+    "summary": "Get All presentations",
+    "response": {
+        "200": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "example": "1713a128-1b47-4a75-9523-e76969ca1c2e"
+                    },
+                    "nameKey": {
+                        "type": "string",
+                        "example": "without-cleaning"
+                    },
+                    "name": {
+                        "type": "string",
+                        "example": "sin limpiar"
+                    }
+                }
+            }
+        }
+    }
+}

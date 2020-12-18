@@ -1,0 +1,10 @@
+{
+    "tags": ["Shipping"],
+    "summary": "test order request ship",
+    "params": {
+        "requestId": {
+            "type": "string",
+            "example": "b18355e7-7c59-4724-9119-50c77651469c"
+        }
+    }
+}

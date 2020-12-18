@@ -1,0 +1,22 @@
+{
+    "tags": ["Payments"],
+    "summary": "Callback by requestId",
+    "consumes": ["multipart/form-data"],
+    "params": {
+        "requestid": {
+            "type": "string",
+            "example": "096e998b-7613-4828-aafa-5787b4e1b05d"
+        }
+    },
+    "body": {
+        "properties": {
+            "signature": {
+                "type": "string"
+            },
+            "merchantParameters": {
+                "type": "string"
+            }
+        }
+    }
+
+}

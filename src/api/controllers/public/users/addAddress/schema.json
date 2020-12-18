@@ -1,0 +1,68 @@
+{
+    "tags": ["Users"],
+    "security": [{
+        "appToken": []
+    }],
+    "summary": "ADD userAddress data",
+    "body": {
+        "required": [
+            "postalCodeId",
+            "name",
+            "street",
+            "roadType",
+            "streetNumber",
+            "type",
+            "priority"
+        ],
+        "properties": {
+            "postalCodeId" :{
+                "$id": "#/properties/postalCodeId",
+                "type": "string",
+                "example": "6674679b-8765-409b-8abe-80c8bec95f27"
+            },
+            "name" :{
+                "$id": "#/properties/name",
+                "type": "string",
+                "example": "casa de mi tia marta"
+            },
+            "street" :{
+                "$id": "#/properties/street",
+                "type": "string",
+                "example": "Conde de ferreria"
+            },
+            "roadType" :{
+                "$id": "#/properties/roadType",
+                "type": "string",
+                "example": "PZ",
+                "enum": [   "AV", "PLA", "PORT", "BDA", "MOLL", "RBLA", 
+                            "CL", "NUS", "RIER", "CRO", "PARC", "RDA", 
+                            "CAMI", "PG", "PDA", "CTRA", "PTGE", "TRAV", 
+                            "DIC", "PAS", "TRVS", "ESC", "PATI", "TUNL", 
+                            "ESP", "PLTA", "VIA", "GV", "PTJA", "VIAD", 
+                            "JRDI", "PL", "VIAL", "JARD", "PTA"
+                ]
+            },
+            "streetNumber" :{
+                "$id": "#/properties/streetNumber",
+                "type": "string",
+                "example": "123"
+            },
+            "type" :{
+                "$id": "#/properties/type",
+                "type": "string",
+                "example": "SHIPPING",
+                "enum": ["SHIPPING", "BILLING"]
+            },
+            "extra" :{
+                "$id": "#/properties/extra",
+                "type": "string",
+                "example": "Bloque B, Piso 1ºA, 2ª Puerta"
+            },
+            "priority" :{
+                "$id": "#/properties/priority",
+                "type": "boolean",
+                "example": true
+            }
+        }
+    }
+}

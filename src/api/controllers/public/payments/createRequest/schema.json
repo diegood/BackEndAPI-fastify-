@@ -1,0 +1,25 @@
+{
+    "tags": ["Payments"],
+    "summary": "Sign payment from cartId",
+    "params": {
+        "cartId": {
+            "type": "string",
+            "example": "096e998b-7613-4828-aafa-5787b4e1b05d"
+        }
+    },
+    "response":{
+        "200": {
+            "type": "object",
+            "properties": {
+                "signature": {
+                    "type": "string",
+                    "example": "NTT1o+X9VXgwuC3XEGlPtG3yR4jfyH9SEOulpcOE3JU="
+                },
+                "merchantParameters": {
+                    "type": "string",
+                    "example": "eyJEU19NRVJDSEFOVF9BTU9VTlQiOiIyMTMyNDUiLCJEU19NRVJDSEFOVF9PUkRFUiI6IjYzMTE2OTQwMCIsIkRTX01FUkNIQU5UX01FUkNIQU5UQ09ERSI6IjE3NTQ0MjE0NCIsIkRTX01FUkNIQU5UX0NVUlJFTkNZIjoiOTc4IiwiRFNfTUVSQ0hBTlRfVFJBTlNBQ1RJT05UWVBFIjoiMSIsIkRTX01FUkNIQU5UX1RFUk1JTkFMIjoiMDAwMSIsIkRTX01FUkNIQU5UX01FUkNIQU5UVVJMIjoiaHR0cHM6Ly9hcGkuZWxtZXJjYWRvZGVscGVzY2Fkby5jb20vcHVibGljL3BheW1lbnRzL2NhbGxiYWNrL2M1NmIyNzE3LTFmYTktNGE1OC1hNzc3LWYwNGU5ZjY2YTkwNSIsIkRTX01FUkNIQU5UX1VSTE9LIjoiaHR0cHM6Ly9lbG1lcmNhZG9kZWxwZXNjYWRvLmNvbS9jYXJ0L3BheW1lbnQvb2svYzU2YjI3MTctMWZhOS00YTU4LWE3NzctZjA0ZTlmNjZhOTA1IiwiRFNfTUVSQ0hBTlRfVVJMS08iOiJodHRwczovL2VsbWVyY2Fkb2RlbHBlc2NhZG8uY29tL2NhcnQvcGF5bWVudC9rby9jNTZiMjcxNy0xZmE5LTRhNTgtYTc3Ny1mMDRlOWY2NmE5MDUifQ=="
+                }
+            }
+        }
+    }
+}

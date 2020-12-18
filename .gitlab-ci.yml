@@ -1,0 +1,31 @@
+# This file is a template, and might need editing before it works on your project.
+# Official framework image. Look for the different tagged releases at:
+# https://hub.docker.com/r/library/node/tags/
+image: kroniak/ssh-client
+
+stages:
+  - deploy
+
+deploy-staging:
+ stage: deploy
+ script:
+   - mkdir -p ~/.ssh
+   - chmod 700 ~/.ssh
+   - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+   - echo "$AWS_ACCESS_KEY_ID" > ~/.ssh/emdp.pem
+   - chmod 600 ~/.ssh/emdp.pem
+   - ssh -i ~/.ssh/emdp.pem ubuntu@ec2-100-27-0-43.compute-1.amazonaws.com 'sh runBackEnd.sh'
+ only:
+   - develop
+
+deploy-production:
+ stage: deploy
+ script:
+   - mkdir -p ~/.ssh
+   - chmod 700 ~/.ssh
+   - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+   - echo "$AWS_ACCESS_KEY_ID" > ~/.ssh/emdp.pem
+   - chmod 600 ~/.ssh/emdp.pem
+   - ssh -i ~/.ssh/emdp.pem ubuntu@ec2-100-27-0-43.compute-1.amazonaws.com 'sh runBackEnd.sh'
+ only:
+   - master

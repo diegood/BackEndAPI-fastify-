@@ -1,0 +1,10 @@
+{
+    "tags": ["Products"],
+    "summary": "Get Products by store id",
+    "params": {
+        "store_id": {
+            "$id": "#/properties/store_id",
+            "type": "string"
+        }
+    }
+}

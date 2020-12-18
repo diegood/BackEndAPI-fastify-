@@ -1,0 +1,27 @@
+{
+    "tags": ["Products"],
+    "summary": "Delete Product",
+
+    "response": {
+        "200": {
+            "type": "string"
+        },
+        "500": {
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "type": "number",
+                    "example": 500
+                },
+                "error":  {
+                    "type": "string",
+                    "example": "internalServerError"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "INTERNAL_SERVER_ERROR"
+                }
+            }
+        }  
+    }
+}

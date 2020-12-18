@@ -1,0 +1,689 @@
+{
+    "tags": ["Stores"],
+    "summary": "Create Store",
+    "params": {
+        "store_id": {
+            "type": [ "string", "null"],
+            "example": "d488c76a-0b07-4aa2-b4fe-0ca5ca9c437e"
+        }
+    },
+    "body": {
+        "type": "object",
+        "required": [
+            "store",
+            "billing"
+            ],
+            "properties": {
+                "store": {
+                    "type": "object",
+                    "properties": {
+                        "name":{
+                            "type": [ "string", "null"],
+                            "example": "El timón II"
+                        },
+                        "phoneNumber": {
+                            "type": [ "string", "null"],
+                            "example": "34952480399"
+                        },
+                        "bussinesHours": {
+                            "type": "object",
+                            "nullable": true,
+                            "properties": {
+                                "sunday": {
+                                    "type": "array",
+                                    "items":
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123456"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": ""
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": ""
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": false
+                                                }
+                                            }
+                                        }
+                                },
+                                "monday": {
+                                    "type": "array",
+                                    "nullable": true,
+                                    "items": 
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123457"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": ""
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": ""
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": false
+                                                }
+                                            }
+                                        }
+                                },
+                                "tuesday": {
+                                    "type": "array",
+                                    "nullable": true,
+                                    "items": 
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123458"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "0700"
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "1500"
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            }
+                                        }
+                                },
+                                "wednesday": {
+                                    "type": "array",
+                                    "nullable": true,
+                                    "items": 
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123459"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "0700"
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "1500"
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            }
+                                        }
+                                },
+                                "thursday": {
+                                    "type": "array",
+                                    "nullable": true,
+                                    "items": 
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123410"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "0700"
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "1500"
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            }
+                                        }
+                                },
+                                "friday": {
+                                    "type": "array",
+                                    "nullable": true,
+                                    "items": 
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123411"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "0700"
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "1500"
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            }
+                                        }
+                                },
+                                "saturday": {
+                                    "type": "array",
+                                    "nullable": true,
+                                    "items": 
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123412"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "1000"
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "1300"
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            }
+                                        }
+                                }
+                            }
+                        },
+                        "description": {
+                            "type": [ "string", "null"],
+                            "example": "La mejor de la zona"
+                        },
+                        "images": {
+                            "type": "array",
+                            "nullable": true,
+                            "items": {
+                                "type": "object",
+                                "nullable": true,
+                                "properties": {
+                                    "type": {
+                                        "type": [ "string", "null"],
+                                        "example": "banner"
+                                    },
+                                    "path": { 
+                                        "type": [ "string", "null"],
+                                        "example": "http://someurlimage.com"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "billing": {
+                    "type": "object",
+                    "nullable": true,
+                    "properties": {
+                        "legal_name": {
+                            "type": [ "string", "null"],
+                            "example": "Timon Ltd"
+                        },
+                        "name": {
+                            "type": [ "string", "null"],
+                            "example": "El gran Timón"
+                        },
+                        "type": {
+                            "type": [ "string", "null"],
+                            "example": "Mayorista"
+                        },
+                        "cif": {
+                            "type": [ "string", "null"],
+                            "example": "1231234578"
+                        },
+                        "bank_number": {
+                            "type": [ "string", "null"],
+                            "example": "7865230915426382765244"
+                        },
+                        "address": {
+                            "type": [ "string", "null"],
+                            "example": "Plaza alameda 76"
+                        },
+                        "email": {
+                            "type": [ "string", "null"],
+                            "example": "timonltd@mail.com"
+                        }
+                    }
+                },
+                "logistic": {
+                    "type": "object",
+                    "nullable": true,
+                    "properties": {
+                        "owncourier": { "type": "boolean"},
+                        "pickup": { "type": "boolean"},
+                        "preparationTime": { "type": [ "string", "null"]},
+                        "postalCodes": {
+                            "type": ["array", "null"],
+                            "nullable": true,
+                            "items": { 
+                                "type": [ "string", "null"],
+                                "example": "29001"
+                            }
+                        },
+                        "contactEmail": {
+                            "type": [ "string", "null"],
+                            "example": "contacto.timon@mail.com"
+                        },
+                        "contactPhone": {
+                            "type": [ "string", "null"],
+                            "example": "3456785786547"
+                        },
+                        "address": {
+                            "type": "object",
+                            "nullable": true,
+                            "properties": {
+                                "postalCode": {
+                                    "type":[ "string", "null"],
+                                    "example": "29001"
+                                },
+                                "street": {
+                                    "type":[ "string", "null"],
+                                    "example": "Fernán González"
+                                },
+                                "streetNumber": { 
+                                    "type":[ "string", "null"],
+                                    "example": "7"
+                                },
+                                "extra": {
+                                    "type":[ "string", "null"],
+                                    "example": "Piso 2"
+                                },
+                                "city": {
+                                    "type":[ "string", "null"],
+                                    "example": "Málaga"
+                                },
+                                "country": {
+                                    "type":[ "string", "null"],
+                                    "example": "ES"
+                                },
+                                "localTown": {
+                                    "type":[ "string", "null"],
+                                    "example": "Malaga"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    },
+    "response": {
+        "200": {
+            "type": "object",
+            "properties": {
+                "store": {
+                    "type": "object",
+                    "nullable": true,
+                    "properties": {
+                        "name":{
+                            "type": [ "string", "null"],
+                            "example": "El timón II"
+                        },
+                        "phoneNumber": {
+                            "type": [ "string", "null"],
+                            "example": "34952480399"
+                        },
+                        "bussinesHours": {
+                            "type": "object",
+                            "nullable": true,
+                            "properties": {
+                                "sunday": {
+                                    "type": "array",
+                                    "nullable": true,
+                                    "items":
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123456"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": ""
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": ""
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": false
+                                                }
+                                            }
+                                        }
+                                },
+                                "monday": {
+                                    "type": "array",
+                                    "nullable": true,
+                                    "items": 
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123457"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": ""
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": ""
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": false
+                                                }
+                                            }
+                                        }
+                                },
+                                "tuesday": {
+                                    "type": "array",
+                                    "nullable": true,
+                                    "items": 
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123458"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "0700"
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "1500"
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            }
+                                        }
+                                },
+                                "wednesday": {
+                                    "type": "array",
+                                    "nullable": true,
+                                    "items": 
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123459"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "0700"
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "1500"
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            }
+                                        }
+                                },
+                                "thursday": {
+                                    "type": "array",
+                                    "nullable": true,
+                                    "items": 
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123410"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "0700"
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "1500"
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            }
+                                        }
+                                },
+                                "friday": {
+                                    "type": "array",
+                                    "nullable": true,
+                                    "items": 
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123411"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "0700"
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "1500"
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            }
+                                        }
+                                },
+                                "saturday": {
+                                    "type": "array",
+                                    "nullable": true,
+                                    "items": 
+                                        {
+                                            "type": "object",
+                                            "nullable": true,
+                                            "properties": {
+                                                "id": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "123412"
+                                                },
+                                                "open": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "1000"
+                                                },
+                                                "close": {
+                                                    "type": [ "string", "null"],
+                                                    "example": "1300"
+                                                },
+                                                "isOpen": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            }
+                                        }
+                                }
+                            }
+                        },
+                        "description": {
+                            "type": [ "string", "null"],
+                            "example": "La mejor de la zona"
+                        },
+                        "images": {
+                            "type": "array",
+                            "nullable": true,
+                            "items": {
+                                "type": "object",
+                                "nullable": true,
+                                "properties": {
+                                    "type": {
+                                        "type": [ "string", "null"],
+                                        "example": "banner"
+                                    },
+                                    "path": { 
+                                        "type": [ "string", "null"],
+                                        "example": "http://someurlimage.com"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "billing": {
+                    "type": "object",
+                    "nullable": true,
+                    "properties": {
+                        "legal_name": {
+                            "type": [ "string", "null"],
+                            "example": "Timon Ltd"
+                        },
+                        "name": {
+                            "type": [ "string", "null"],
+                            "example": "El gran Timón"
+                        },
+                        "type": {
+                            "type": [ "string", "null"],
+                            "example": "Mayorista"
+                        },
+                        "cif": {
+                            "type": [ "string", "null"],
+                            "example": "1231234578"
+                        },
+                        "bank_number": {
+                            "type": [ "string", "null"],
+                            "example": "7865230915426382765244"
+                        },
+                        "address": {
+                            "type": [ "string", "null"],
+                            "example": "Plaza alameda 76"
+                        },
+                        "email": {
+                            "type": [ "string", "null"],
+                            "example": "timonltd@mail.com"
+                        }
+                    }
+                },
+                "logistic": {
+                    "type": "object",
+                    "nullable": true,
+                    "properties": {
+                        "owncourier": { "type": "boolean"},
+                        "pickup": { "type": "boolean"},
+                        "preparationTime": { "type": [ "string", "null"]},
+                        "postalCodes": {
+                            "type": ["array", "null"],
+                            "nullable": true,
+                            "items": { 
+                                "type": [ "string", "null"],
+                                "example": "29001"
+                            }
+                        },
+                        "contactEmail": {
+                            "type": [ "string", "null"],
+                            "example": "contacto.timon@mail.com"
+                        },
+                        "contactPhone": {
+                            "type": [ "string", "null"],
+                            "example": "3456785786547"
+                        },
+                        "address": {
+                            "type": "object",
+                            "nullable": true,
+                            "properties": {
+                                "postalCode": {
+                                    "type": [ "string", "null"],
+                                    "example": "29001"
+                                },
+                                "street": {
+                                    "type": [ "string", "null"],
+                                    "example": "Fernán González"
+                                },
+                                "streetNumber": { 
+                                    "type": [ "string", "null"],
+                                    "example": "7"
+                                },
+                                "extra": {
+                                    "type": [ "string", "null"],
+                                    "example": "Piso 2"
+                                },
+                                "city": {
+                                    "type": [ "string", "null"],
+                                    "example": "Málaga"
+                                },
+                                "country": {
+                                    "type": [ "string", "null"],
+                                    "example": "ES"
+                                },
+                                "localTown": {
+                                    "type": [ "string", "null"],
+                                    "example": "Malaga"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "500": {
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "type": "number",
+                    "example": 500
+                },
+                "error":  {
+                    "type": [ "string", "null"],
+                    "example": "internalServerError"
+                },
+                "message": {
+                    "type": [ "string", "null"],
+                    "example": "INTERNAL_SERVER_ERROR"
+                }
+            }
+        }  
+    }
+}

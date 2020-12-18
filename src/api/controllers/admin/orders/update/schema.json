@@ -1,0 +1,37 @@
+{
+    "tags": ["Orders"],
+    "summary": "Update Orders",
+    "body": {
+        "$id": "updateOrderSchema",
+        "type": "object",
+        "required": [
+            "id",
+            "status"
+            ],
+        "properties": {
+            "id": {
+                "$id": "#/properties/id",
+                "type": "string"
+            },
+            "status": {
+                "$id": "#/properties/status",
+                "type": "string",
+                "enum" : ["NEW", "PENDING", "WAITING_TICKET", "PICKUP_READY", "DELIVERED"],
+                "example" : "WAITING_TICKET"
+            }
+        }
+    },
+    "response": {
+        "200": {
+            "type": "object"
+        },
+        "500": {
+            "type": "object",
+            "properties": {
+                "statusCode": { "type": "number"},
+                "error":  { "type": "string"},
+                "message": { "type": "string"}
+            }
+        } 
+    }
+}

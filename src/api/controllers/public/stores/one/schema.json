@@ -1,0 +1,428 @@
+{
+    "tags": ["Stores"],
+    "summary": "Get one store by id",
+    "params": {
+        "id": {
+            "$id": "#/properties/id",
+            "type": "string",
+            "example": "56bb204a-d92c-48b1-bd18-b9d7c45d87c6"
+        }
+    },
+    "response": {
+        "200": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": ["string", "null"],
+                    "example": "56bb204a-d92c-48b1-bd18-b9d7c45d87c6"
+                },
+                "uriName": {
+                    "type": ["string", "null"],
+                    "example": "pescadito-feliz"
+                },
+                "name": {
+                    "type": ["string", "null"],
+                    "example": "pescadito feliz"
+                },
+                "description": {
+                    "type": ["string", "null"],
+                    "example": "tenemos los mejores pescados de todo valencia "
+                },
+                "phoneNumber": {
+                    "type": ["string", "null"],
+                    "example": "12345567889"
+                },
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "nullable": true,
+                        "properties": {
+                            "type": {
+                                "type": ["string", "null"],
+                                "example": "banner"
+                            },
+                            "id": {
+                                "type": ["string", "null"],
+                                "example": "2b31y873-y187y871-y287y13-8721y387y-12838127"
+                            },
+                            "path": {
+                                "type": ["string", "null"],
+                                "example": "/dinamic/stores/dsa121d1232d12/banner.jpg"
+                            }
+                        }
+                    },
+                    "nullable": true
+                },
+                "bussinesHours": {
+                    "properties": {
+                        "sunday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "open": {
+                                        "type": ["string", "null"],
+                                        "example": ""
+                                    },
+                                    "close": {
+                                        "type": ["string", "null"],
+                                        "example": ""
+                                    },
+                                    "id": {
+                                        "type": ["string", "null"],
+                                        "example": "5ca5578b0c5c7"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": false
+                                    }
+                                }
+                            }
+                        },
+                        "monday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "open": {
+                                        "type": ["string", "null"],
+                                        "example": "0800"
+                                    },
+                                    "close": {
+                                        "type": ["string", "null"],
+                                        "example": "1700"
+                                    },
+                                    "id": {
+                                        "type": ["string", "null"],
+                                        "example": "5ca5578b0c5d1"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": true
+                                    }
+                                }
+                            }
+                        },
+                        "tuesday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "open": {
+                                        "type": ["string", "null"],
+                                        "example": "0800"
+                                    },
+                                    "close": {
+                                        "type": ["string", "null"],
+                                        "example": "1700"
+                                    },
+                                    "id": {
+                                        "type": ["string", "null"],
+                                        "example": "5ca5578b0c5d8"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": true
+                                    }
+                                }
+                            }
+                        },
+                        "wednesday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "open": {
+                                        "type": ["string", "null"],
+                                        "example": "0800"
+                                    },
+                                    "close": {
+                                        "type": ["string", "null"],
+                                        "example": "1700"
+                                    },
+                                    "id": {
+                                        "type": ["string", "null"],
+                                        "example": "5ca5578b0c5df"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": true
+                                    }
+                                }
+                            }
+                        },
+                        "thursday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "open": {
+                                        "type": ["string", "null"],
+                                        "example": "0800"
+                                    },
+                                    "close": {
+                                        "type": ["string", "null"],
+                                        "example": "1700"
+                                    },
+                                    "id": {
+                                        "type": ["string", "null"],
+                                        "example": "5ca5578b0c5e6"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": true
+                                    }
+                                }
+                            }
+                        },
+                        "friday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "nullable": true,
+                                "properties": {
+                                    "open": {
+                                        "type": ["string", "null"],
+                                        "example": "0800"
+                                    },
+                                    "close": {
+                                        "type": ["string", "null"],
+                                        "example": "1700"
+                                    },
+                                    "id": {
+                                        "type": ["string", "null"],
+                                        "example": "5ca5578b0c5ec"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": true
+                                    }
+                                }
+                            }
+                        },
+                        "saturday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "nullable": true,
+                                "properties": {
+                                    "open": {
+                                        "type": ["string", "null"],
+                                        "example": "24hrs"
+                                    },
+                                    "close": {
+                                        "type": ["string", "null"],
+                                        "example": "24hrs"
+                                    },
+                                    "id": {
+                                        "type": ["string", "null"],
+                                        "example": "5ca5578b0c5f8"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": true
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "type": "object",
+                    "nullable": true
+                },
+                "fiscalData": {
+                    "properties": {
+                        "legal_name": {
+                            "type": ["string", "null"],
+                            "example": "el ancla S.a"
+                        },
+                        "type": {
+                            "type": ["string", "null"],
+                            "example": "importer"
+                        },
+                        "cif": {
+                            "type": ["string", "null"],
+                            "example": "1231231231"
+                        },
+                        "bank_number": {
+                            "type": ["string", "null"],
+                            "example": ""
+                        },
+                        "address": {
+                            "type": ["string", "null"],
+                            "example": "sadadsad"
+                        },
+                        "name": {
+                            "type": ["string", "null"],
+                            "example": "asdasdas"
+                        },
+                        "email": {
+                            "type": ["string", "null"],
+                            "example": "231231231312"
+                        }
+                    },
+                    "type": "object",
+                    "nullable": true
+                },
+                "logisticStore": {
+                    "type": "object",
+                    "nullable": true,
+                    "properties": {
+                        "id": {
+                            "type": ["string", "null"],
+                            "example": "7f0e8fd6-8f78-490d-bb09-85ce49765065"
+                        },
+                        "addressId": {
+                            "type": ["string", "null"],
+                            "example": "efbd59ac-4a54-4126-9a8e-7eed94f2ac5e"
+                        },
+                        "storeId": {
+                            "type": ["string", "null"],
+                            "example": "56bb204a-d92c-48b1-bd18-b9d7c45d87c6"
+                        },
+                        "owncourier": {
+                            "type": ["boolean", "null"],
+                            "example": true
+                        },
+                        "pickup": {
+                            "type": ["boolean", "null"],
+                            "example": false
+                        },
+                        "preparationTime": {
+                            "type": ["string", "null"],
+                            "example": "2:00"
+                        },
+                        "postalCodes": {
+                            "type": "array",
+                            "nullable": true,
+                            "items": {
+                                "type": ["string", "null"]
+                            },
+                            "example": [
+                                "1231",
+                                "5231",
+                                "645"
+                            ]
+                        },
+                        "contactPhone": {
+                            "type": ["string", "null"],
+                            "example": "1231231312"
+                        },
+                        "contactEmail": {
+                            "type": ["string", "null"],
+                            "example": "pescadoFeliz@fresquitos.es"
+                        },
+                        "address": {
+                            "type": "object",
+                            "nullable": true,
+                            "properties": {
+                                "id": {
+                                    "type": ["string", "null"],
+                                    "example": "efbd59ac-4a54-4126-9a8e-7eed94f2ac5e"
+                                },
+                                "type": {
+                                    "type": ["string", "null"],
+                                    "example": "warehouse"
+                                },
+                                "country": {
+                                    "type": ["string", "null"],
+                                    "example": "ES"
+                                },
+                                "city": {
+                                    "type": ["string", "null"],
+                                    "example": "malaga"
+                                },
+                                "street": {
+                                    "type": ["string", "null"],
+                                    "example": "av siempre viva"
+                                },
+                                "streetNumber": {
+                                    "type": ["string", "null"],
+                                    "example": "742"
+                                },
+                                "extra": {
+                                    "type": ["string", "null"],
+                                    "example": "742"
+                                },
+                                "postalCode": {
+                                    "type": ["string", "null"],
+                                    "example": "4023"
+                                },
+                                "localTown": {
+                                    "type": ["string", "null"],
+                                    "example": "springfield"
+                                }
+                            }
+                        }
+                    }
+                },
+                "users": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": ["string", "null"],
+                                "example": "469ec51c-258a-44f1-b39a-ae0caee06c75"
+                            },
+                            "email": {
+                                "type": ["string", "null"],
+                                "example": "tomnook@mail.com"
+                            },
+                            "firstName": {
+                                "type": ["string", "null"],
+                                "example": "tom"
+                            },
+                            "lastName": {
+                                "type": ["string", "null"],
+                                "example": "nook"
+                            },
+                            "documentType": {
+                                "type": ["string", "null"],
+                                "example": "dni"
+                            },
+                            "documentNumber": {
+                                "type": ["string", "null"],
+                                "example": "5555555X"
+                            },
+                            "avatar": {
+                                "type": ["string", "null"],
+                                "example": "https://elmercadodelpescado.s3.amazonaws.com/users-avatars/tomnook.jpeg"
+                            },
+                            "active": {
+                                "type": "boolean",
+                                "example": true
+                            },
+                            "locale": {
+                                "type": ["string", "null"],
+                                "example": "es-ES"
+                            },
+                            "lastLoginDate": {
+                                "type": ["string", "null"],
+                                "example": "2020-07-16T07:04:01.390Z"
+                            },
+                            "usersStore": {
+                                "properties": {
+                                    "id": {
+                                        "type": ["string", "null"],
+                                        "example": "3b653cf2-b71d-4ece-891a-02874a79ed31"
+                                    },
+                                    "userId": {
+                                        "type": ["string", "null"],
+                                        "example": "469ec51c-258a-44f1-b39a-ae0caee06c75"
+                                    },
+                                    "storeId": {
+                                        "type": ["string", "null"],
+                                        "example": "56bb204a-d92c-48b1-bd18-b9d7c45d87c6"
+                                    }
+                                },
+                                "type": "object",
+                                "nullable": true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

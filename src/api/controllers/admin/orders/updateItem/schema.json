@@ -1,0 +1,17 @@
+{
+    "tags": ["Orders"],
+    "summary": "Update Order items",
+    "body": {
+        "$id": "updateOrderItemSchema",
+        "type": "object",
+        "properties": {
+            "id": {
+                "$id": "#/properties/id",
+                "type": "string"
+            }
+        },
+        "required": [
+        "id"
+        ]
+    }
+}

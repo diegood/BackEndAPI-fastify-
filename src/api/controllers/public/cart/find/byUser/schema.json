@@ -1,0 +1,29 @@
+{
+    "tags": ["Cart"],
+    "summary": "Get Cart by userId",
+    "params": {
+        "userId": {
+            "type": "string",
+            "example": "fac49d5d-b1a9-4170-a2ec-5befd73c0e13"
+        }
+    },
+    "response": {
+        "500": {
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "type": "number",
+                    "example": 500
+                },
+                "error":  {
+                    "type": "string",
+                    "example": "internalServerError"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "INTERNAL_SERVER_ERROR"
+                }
+            }
+        } 
+    }
+}

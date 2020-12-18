@@ -1,0 +1,219 @@
+{
+    "tags": ["Cart"],
+    "summary": "Create Cart",
+    "body": {
+        "$id": "createCartSchema",
+        "type": "object",
+        "properties": {
+            "userId": {
+                "type": "string",
+                "example": "cd64eca4-1d79-4053-b5de-48449bb08a89"
+            },
+            "currency": {
+                "type": "string",
+                "default": "EUR",
+                "example": "EUR"
+            },
+            "items": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "example": "0c3c01ee-6c8d-4f7e-a382-c66c782078b9"
+                        },
+                        "storeId": {
+                            "type": "string",
+                            "example": "b9e54e29-b016-4919-beee-1663bb605044"
+                        },
+                        "productBaseId": {
+                            "type": "string",
+                            "example": "8a5c591c-2021-41cd-a97d-3502947aaf4f"
+                        },
+                        "productName": {
+                            "type": "string",
+                            "example": "Boquerones chicos"
+                        },
+                        "price": {
+                            "type": "number",
+                            "example": 9.60
+                        },
+                        "variant": {
+                            "type": "string",
+                            "example": "by_weight"
+                        },
+                        "storeId": {
+                            "type": "string",
+                            "example": "b9e54e29-b016-4919-beee-1663bb605044"
+                        },
+                        "storeName": {
+                            "type": "string",
+                            "example": "Pescados y Mariscos El Pedrillo"
+                        },
+                        "image": {
+                            "type": "string",
+                            "example": "https://cdn2.cocinadelirante.com/sites/default/files/images/2019/01/receta-de-pescado-frito-al-mojo-de-ajo.jpg"
+                        },
+                        "units": {
+                            "type": "number",
+                            "example": 5
+                        },
+                        "unitWeight": {
+                            "type": "number",
+                            "example": 0.5
+                        },
+                        "recommendedPortion": {
+                            "type": "number",
+                            "example": 0.9
+                        },
+                        "measurementUnit": {
+                            "type": "string",
+                            "example": "Kg"
+                        },
+                        "presentation": {
+                            "type": "string",
+                            "example": "without_cleaning"
+                        },
+                        "alternatives": {
+                            "type": "string",
+                            "example": "Reemplazar por Boquerones Medianos Málaga"
+                        },
+                        "alternativeAction": {
+                            "type": "string",
+                            "example": "No incluir y continuar con el pedido"
+                        },
+                        "message": {
+                            "type": "string",
+                            "example": "enviar las cabezas tambien"
+                        },
+                        "maximumPrice": {
+                            "type": "number",
+                            "example": 34.90
+                        }
+                    }
+                }
+            }
+        },
+        "required": [
+        "items"
+        ]
+    },
+    "response": {
+        "200": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "example": "096e998b-7613-4828-aafa-5787b4e1b05d"
+                },
+                "currency": {
+                    "type": "string",
+                    "default": "EUR",
+                    "example": "EUR"
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "example": "0c3c01ee-6c8d-4f7e-a382-c66c782078b9"
+                            },
+                            "storeId": {
+                                "type": "string",
+                                "example": "b9e54e29-b016-4919-beee-1663bb605044"
+                            },
+                            "productBaseId": {
+                                "type": "string",
+                                "example": "8a5c591c-2021-41cd-a97d-3502947aaf4f"
+                            },
+                            "productName": {
+                                "type": "string",
+                                "example": "Boquerones chicos"
+                            },
+                            "price": {
+                                "type": "number",
+                                "example": 9.60
+                            },
+                            "variant": {
+                                "type": "string",
+                                "example": "by_weight"
+                            },
+                            "storeId": {
+                                "type": "string",
+                                "example": "b9e54e29-b016-4919-beee-1663bb605044"
+                            },
+                            "storeName": {
+                                "type": "string",
+                                "example": "Pescados y Mariscos El Pedrillo"
+                            },
+                            "image": {
+                                "type": "string",
+                                "example": "https://cdn2.cocinadelirante.com/sites/default/files/images/2019/01/receta-de-pescado-frito-al-mojo-de-ajo.jpg"
+                            },
+                            "units": {
+                                "type": "number",
+                                "example": 5
+                            },
+                            "unitWeight": {
+                                "type": "number",
+                                "example": 0.5
+                            },
+                            "recommendedPortion": {
+                                "type": "number",
+                                "example": 0.9
+                            },
+                            "measurementUnit": {
+                                "type": "string",
+                                "example": "Kg"
+                            },
+                            "presentation": {
+                                "type": "string",
+                                "example": "without_cleaning"
+                            },
+                            "alternatives": {
+                                "type": "string",
+                                "example": "Reemplazar por Boquerones Medianos Málaga"
+                            },
+                            "alternativeAction": {
+                                "type": "string",
+                                "example": "No incluir y continuar con el pedido"
+                            },
+                            "message": {
+                                "type": "string",
+                                "example": "enviar las cabezas tambien"
+                            },
+                            "maximumPrice": {
+                                "type": "number",
+                                "example": 34.90
+                            }
+                        }
+                    }
+                },
+                "userId": {
+                    "type": "string",
+                    "example": null
+                }
+            }
+        },
+        "500": {
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "type": "number",
+                    "example": 500
+                },
+                "error":  {
+                    "type": "string",
+                    "example": "internalServerError"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "INTERNAL_SERVER_ERROR"
+                }
+            }
+        } 
+    }
+}

@@ -1,0 +1,184 @@
+{
+    "tags": ["Cart"],
+    "summary": "Get Cart",
+    "params": {
+        "cartId": {
+            "type": "string",
+            "example": "096e998b-7613-4828-aafa-5787b4e1b05d"
+        }
+    },
+    "response": {
+        "200": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "example": "53f68c08-3308-40aa-abde-8cd447402bbe"
+                },
+                "userId": {
+                    "type": "string",
+                    "example": "53f68c08-3308-40aa-abde-8cd447402bbe"
+                },
+                "addressId": {
+                    "type": "string",
+                    "example": "53f68c08-3308-40aa-abde-8cd447402bbe"
+                },
+                "currency": {
+                    "type": "string",
+                    "example": "EUR"
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "productId": {
+                                "type": "string",
+                                "example": "87299f12-c347-4941-a22a-7f41772ed910"
+                            },
+                            "productName": {
+                                "type": "string",
+                                "example": "coquinas / tellinas  Grandes"
+                            },
+                            "image": {
+                                "type": "string",
+                                "example": "https://elmercadodelpescado.s3.amazonaws.com/productos-pescaderia/ejemplo/boquerones-gordos-el-trasmallo-2.jpg"
+                            },
+                            "price": {
+                                "type": "number",
+                                "example": 1
+                            },
+                            "variant": {
+                                "type": "string",
+                                "example": "by_weight"
+                            },
+                            "storeId": {
+                                "type": "string",
+                                "example": "b9e54e29-b016-4919-beee-1663bb605044"
+                            },
+                            "storeName": {
+                                "type": "string",
+                                "example": "pescadito feliz"
+                            },
+                            "units": {
+                                "type": "number",
+                                "example": 1
+                            },
+                            "unitWeight": {
+                                "type": "number",
+                                "example": 0.9
+                            },
+                            "recommendedPortion": {
+                                "type": "number",
+                                "example": 0.15
+                            },
+                            "measurementUnit": {
+                                "type": "string",
+                                "example": "Kg"
+                            },
+                            "presentation": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                },
+                                "example": [
+                                    "baked"
+                                ]
+                            },
+                            "alternatives": {
+                                "type": "string",
+                                "example": ""
+                            },
+                            "alternativeAction": {
+                                "type": "string",
+                                "example": ""
+                            },
+                            "message": {
+                                "type": "string",
+                                "example": ""
+                            },
+                            "maximumPrice": {
+                                "type": "number",
+                                "example": 23
+                            }
+                        }
+                    }
+                },
+                "address": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "example": "12c2df4a-5ec6-48e5-b226-fe19bc1e7034"
+                        },
+                        "type": {
+                            "type": "string",
+                            "example": "SHIPPING"
+                        },
+                        "country": {
+                            "type": "string",
+                            "example": "ES"
+                        },
+                        "city": {
+                            "type": "string",
+                            "example": "Malaga"
+                        },
+                        "roadType": {
+                            "type": "string",
+                            "example": "CL"
+                        },
+                        "street": {
+                            "type": "string",
+                            "example": "Plaza de la Marina"
+                        },
+                        "streetNumber": {
+                            "type": "string",
+                            "example": "11"
+                        },
+                        "postalCode": {
+                            "type": "string",
+                            "example": "29001"
+                        },
+                        "localTown": {
+                            "type": "string",
+                            "example": "Malaga"
+                        },
+                        "creationDate": {
+                            "type": "string",
+                            "example": "2020-07-31T20:43:44.884Z"
+                        },
+                        "updatedDate": {
+                            "type": "string",
+                            "example": "2020-07-31T20:43:44.884Z"
+                        }
+                    }
+                },
+                "creationDate": {
+                    "type": "string",
+                    "example": "2020-08-04T21:20:07.412Z"
+                },
+                "updatedDate": {
+                    "type": "string",
+                    "example": "2020-08-04T21:20:07.412Z"
+                }
+            }
+        },
+        "500": {
+            "type": "object",
+            "properties": {
+                "statusCode": {
+                    "type": "number",
+                    "example": 500
+                },
+                "error":  {
+                    "type": "string",
+                    "example": "internalServerError"
+                },
+                "message": {
+                    "type": "string",
+                    "example": "INTERNAL_SERVER_ERROR"
+                }
+            }
+        } 
+    }
+}

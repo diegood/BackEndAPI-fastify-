@@ -1,0 +1,14 @@
+{
+    "tags": ["Users"],
+    "security": [{
+        "appToken": []
+    }],
+    "summary": "Delete user Address",
+    "params": {
+        "userAddressId": {
+            "type": "string",
+            "exmaple": "096e998b-7613-4828-aafa-5787b4e1b05d"
+        }
+    }
+    
+}

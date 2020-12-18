@@ -1,0 +1,159 @@
+{
+    "tags": ["Products"],
+    "summary": "Update Products",
+    "body": {
+        "$id": "createProductSchema",
+        "type": "object",
+        "required": [
+            "id",
+            "storeId",
+            "productBaseId"
+            ],
+        "properties": {
+            "id": {
+                "$id": "#/properties/id",
+                "type": "string"
+            },
+            "storeId": {
+                "$id": "#/properties/storeId",
+                "type": "string"
+            },
+            "productBaseId":{
+                "$id": "#/properties/productBaseId",
+                "type": "string"
+            },
+            "images": {
+                "$id": "#/properties/images",
+                "type": "array",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "name": {
+                "$id": "#/properties/name",
+                "type": "string"
+            },
+            "quantity": {
+                "$id": "#/properties/number",
+                "type": "number"
+            },
+            "status": {
+                "$id": "#/properties/status",
+                "type": "string"
+            },
+            "price": {
+                "$id": "#/properties/price",
+                "type": "number"
+            },
+            "variant": {
+                "$id": "#/properties/variant",
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "type": "string",
+                            "description": "The type of variant."
+                        },
+                        "unitValue": {
+                            "type": "array",
+                            "description": "unit values variant",
+                            "items": {
+                                "type": "number"
+                            }
+                        },
+                        "measurementsUnit": {
+                            "type": "string",
+                            "description": "measure unit variant"
+                        }
+                    }
+                }
+            },
+            "filters": {
+                "type": "object",
+                "nulleable": true,
+                "properties": {
+                    "formOfBreeding": {
+                        "type": "string",
+                        "example": "fish_farm"
+                    },
+                    "presentation": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "example": [
+                            "WITHOUT_CLEANING",
+                            "gutted_without_head",
+                            "gutted_with_head"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "response": {
+        "200": {
+            "type": "object",
+            "properties": {
+                "id": { "type": "string"},
+                "storeId": { "type": "string"},
+                "productBaseId": { "type": "string"},
+                "images": { 
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "name": { "type": "string"},
+                "quantity": { "type": "number"},
+                "status": { "type": "string"},
+                "price": { "type": "number"},
+                "variant": {
+                    "type": "array",
+                    "items": {
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "description": "The type of variant."
+                            },
+                            "unitValue": {
+                                "type": "array",
+                                "description": "unit values variant",
+                                "items": {
+                                    "type": "number"
+                                }
+                            },
+                            "measurementsUnit": {
+                                "type": "string",
+                                "description": "measure unit variant"
+                            }
+                        }
+                    }
+                },
+                "filters": {
+                    "type": "object",
+                    "properties": {
+                        "formOfBreeding": {
+                            "type": "array", 
+                            "items": { "type": "string" }
+                        },
+                        "preparation": {
+                            "type": "array",
+                            "items": { "type": "string" }    
+                        }
+                    }
+                }
+
+            }
+        },
+        "500": {
+            "type": "object",
+            "properties": {
+                "statusCode": { "type": "number"},
+                "error":  { "type": "string"},
+                "message": { "type": "string"}
+            }
+        } 
+    }
+}

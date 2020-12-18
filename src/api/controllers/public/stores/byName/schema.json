@@ -1,0 +1,466 @@
+{
+    "tags": ["Stores"],
+    "summary": "Get one store by name",
+    "params": {
+        "name_store": {
+            "$id": "#/properties/name_store",
+            "type": "string",
+            "example": "el-tramallo"
+        }
+    },
+    "response": {
+        "200": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "example": "b9e54e29-b016-4919-beee-1663bb605044"
+                },
+                "uriName": {
+                    "type": "string",
+                    "example": "pescadito-feliz"
+                },
+                "name": {
+                    "type": "string",
+                    "example": "pescadito feliz"
+                },
+                "description": {
+                    "type": "string",
+                    "example": "tenemos los mejores pescados de todo valencia "
+                },
+                "phoneNumber": {
+                    "type": "string",
+                    "example": "12345567889"
+                },
+                "images": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "type": {
+                                "type": "string",
+                                "example": "banner"
+                            },
+                            "id": {
+                                "type": "string",
+                                "example": "2b31y873-y187y871-y287y13-8721y387y-12838127"
+                            },
+                            "path": {
+                                "type": "string",
+                                "example": "/dinamic/stores/dsa121d1232d12/banner.jpg"
+                            }
+                        }
+                    }
+                },
+                "bussinesHours": {
+                    "properties": {
+                        "sunday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "open": {
+                                        "type": "string",
+                                        "example": ""
+                                    },
+                                    "close": {
+                                        "type": "string",
+                                        "example": ""
+                                    },
+                                    "id": {
+                                        "type": "string",
+                                        "example": "5ca5578b0c5c7"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": false
+                                    }
+                                }
+                            }
+                        },
+                        "monday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "open": {
+                                        "type": "string",
+                                        "example": "0800"
+                                    },
+                                    "close": {
+                                        "type": "string",
+                                        "example": "1700"
+                                    },
+                                    "id": {
+                                        "type": "string",
+                                        "example": "5ca5578b0c5d1"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": true
+                                    }
+                                }
+                            }
+                        },
+                        "tuesday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "open": {
+                                        "type": "string",
+                                        "example": "0800"
+                                    },
+                                    "close": {
+                                        "type": "string",
+                                        "example": "1700"
+                                    },
+                                    "id": {
+                                        "type": "string",
+                                        "example": "5ca5578b0c5d8"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": true
+                                    }
+                                }
+                            }
+                        },
+                        "wednesday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "open": {
+                                        "type": "string",
+                                        "example": "0800"
+                                    },
+                                    "close": {
+                                        "type": "string",
+                                        "example": "1700"
+                                    },
+                                    "id": {
+                                        "type": "string",
+                                        "example": "5ca5578b0c5df"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": true
+                                    }
+                                }
+                            }
+                        },
+                        "thursday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "open": {
+                                        "type": "string",
+                                        "example": "0800"
+                                    },
+                                    "close": {
+                                        "type": "string",
+                                        "example": "1700"
+                                    },
+                                    "id": {
+                                        "type": "string",
+                                        "example": "5ca5578b0c5e6"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": true
+                                    }
+                                }
+                            }
+                        },
+                        "friday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "open": {
+                                        "type": "string",
+                                        "example": "0800"
+                                    },
+                                    "close": {
+                                        "type": "string",
+                                        "example": "1700"
+                                    },
+                                    "id": {
+                                        "type": "string",
+                                        "example": "5ca5578b0c5ec"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": true
+                                    }
+                                }
+                            }
+                        },
+                        "saturday": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "open": {
+                                        "type": "string",
+                                        "example": "24hrs"
+                                    },
+                                    "close": {
+                                        "type": "string",
+                                        "example": "24hrs"
+                                    },
+                                    "id": {
+                                        "type": "string",
+                                        "example": "5ca5578b0c5f8"
+                                    },
+                                    "isOpen": {
+                                        "type": "boolean",
+                                        "example": true
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "type": "object"
+                },
+                "fiscalData": {
+                    "properties": {
+                        "legal_name": {
+                            "type": "string",
+                            "example": "el ancla S.a"
+                        },
+                        "type": {
+                            "type": "string",
+                            "example": "importer"
+                        },
+                        "cif": {
+                            "type": "string",
+                            "example": "1231231231"
+                        },
+                        "bank_number": {
+                            "type": "string",
+                            "example": ""
+                        },
+                        "address": {
+                            "type": "string",
+                            "example": "sadadsad"
+                        },
+                        "name": {
+                            "type": "string",
+                            "example": "asdasdas"
+                        },
+                        "email": {
+                            "type": "string",
+                            "example": "231231231312"
+                        }
+                    },
+                    "type": "object"
+                },
+                "localPostalCodes": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "example": [
+                        "29001",
+                        "29002",
+                        "29003"
+                    ]
+                },
+                "creationDate": {
+                    "type": "string",
+                    "example": "2020-07-13T20:52:47.957Z"
+                },
+                "updatedDate": {
+                    "type": "string",
+                    "example": "2020-07-13T20:52:47.957Z"
+                },
+                "logisticStore": {
+                    "properties": {
+                        "id": {
+                            "type": "string",
+                            "example": "7f0e8fd6-8f78-490d-bb09-85ce49765065"
+                        },
+                        "addressId": {
+                            "type": "string",
+                            "example": "efbd59ac-4a54-4126-9a8e-7eed94f2ac5e"
+                        },
+                        "storeId": {
+                            "type": "string",
+                            "example": "b9e54e29-b016-4919-beee-1663bb605044"
+                        },
+                        "owncourier": {
+                            "type": "boolean",
+                            "example": true
+                        },
+                        "pickup": {
+                            "type": "boolean",
+                            "example": false
+                        },
+                        "preparationTime": {
+                            "type": "string",
+                            "example": "2:00"
+                        },
+                        "postalCodes": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "example": [
+                                "1231",
+                                "5231",
+                                "645"
+                            ]
+                        },
+                        "contactPhone": {
+                            "type": "string",
+                            "example": "1231231312"
+                        },
+                        "contactEmail": {
+                            "type": "string",
+                            "example": "pescadoFeliz@fresquitos.es"
+                        },
+                        "creationDate": {
+                            "type": "string",
+                            "example": "2020-07-15T18:53:51.530Z"
+                        },
+                        "updatedDate": {
+                            "type": "string",
+                            "example": "2020-07-15T18:53:51.530Z"
+                        },
+                        "address": {
+                            "properties": {
+                                "id": {
+                                    "type": "string",
+                                    "example": "efbd59ac-4a54-4126-9a8e-7eed94f2ac5e"
+                                },
+                                "type": {
+                                    "type": "string",
+                                    "example": "warehouse"
+                                },
+                                "country": {
+                                    "type": "string",
+                                    "example": "ES"
+                                },
+                                "city": {
+                                    "type": "string",
+                                    "example": "malaga"
+                                },
+                                "street": {
+                                    "type": "string",
+                                    "example": "av siempre viva"
+                                },
+                                "streetNumber": {
+                                    "type": "string",
+                                    "example": "742"
+                                },
+                                "extra": {
+                                    "type": "string",
+                                    "example": "742"
+                                },
+                                "postalCode": {
+                                    "type": "string",
+                                    "example": "4023"
+                                },
+                                "localTown": {
+                                    "type": "string",
+                                    "example": "springfield"
+                                },
+                                "creationDate": {
+                                    "type": "string",
+                                    "example": "2020-07-15T21:09:44.664Z"
+                                },
+                                "updatedDate": {
+                                    "type": "string",
+                                    "example": "2020-07-15T21:09:44.664Z"
+                                }
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                },
+                "users": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "example": "469ec51c-258a-44f1-b39a-ae0caee06c75"
+                            },
+                            "email": {
+                                "type": "string",
+                                "example": "tomnook@mail.com"
+                            },
+                            "password": {
+                                "type": "string",
+                                "example": "$2b$10$LsSCUuveIR2JhomXmQ20pO8hrxThlmsP.mumsZjxOBq.AmuIVyKHG"
+                            },
+                            "firstName": {
+                                "type": "string",
+                                "example": "tom"
+                            },
+                            "lastName": {
+                                "type": "string",
+                                "example": "nook"
+                            },
+                            "documentType": {
+                                "type": "string",
+                                "example": "dni"
+                            },
+                            "documentNumber": {
+                                "type": "string",
+                                "example": "5555555X"
+                            },
+                            "avatar": {
+                                "type": "string",
+                                "example": "https://elmercadodelpescado.s3.amazonaws.com/users-avatars/tomnook.jpeg"
+                            },
+                            "active": {
+                                "type": "boolean",
+                                "example": true
+                            },
+                            "locale": {
+                                "type": "string",
+                                "example": "es-ES"
+                            },
+                            "lastLoginDate": {
+                                "type": "string",
+                                "example": "2020-07-16T07:04:01.390Z"
+                            },
+                            "creationDate": {
+                                "type": "string",
+                                "example": "2020-07-16T07:04:01.288Z"
+                            },
+                            "updatedDate": {
+                                "type": "string",
+                                "example": "2020-07-16T07:04:01.390Z"
+                            },
+                            "usersStore": {
+                                "properties": {
+                                    "id": {
+                                        "type": "string",
+                                        "example": "3b653cf2-b71d-4ece-891a-02874a79ed31"
+                                    },
+                                    "userId": {
+                                        "type": "string",
+                                        "example": "469ec51c-258a-44f1-b39a-ae0caee06c75"
+                                    },
+                                    "storeId": {
+                                        "type": "string",
+                                        "example": "b9e54e29-b016-4919-beee-1663bb605044"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,38 @@
+2020-07-09 19:11:42.642 -03 [4467] LOG:  starting PostgreSQL 12.3 on x86_64-apple-darwin18.7.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.17), 64-bit
+2020-07-09 19:11:42.643 -03 [4467] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-07-09 19:11:42.643 -03 [4467] LOG:  listening on IPv6 address "::1", port 5432
+2020-07-09 19:11:42.644 -03 [4467] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-07-09 19:11:42.654 -03 [4468] LOG:  database system was shut down at 2020-07-09 19:11:36 -03
+2020-07-09 19:11:42.657 -03 [4467] LOG:  database system is ready to accept connections
+2020-07-09 20:55:09.091 -03 [4788] ERROR:  syntax error at or near "id" at character 178
+2020-07-09 20:55:09.091 -03 [4788] STATEMENT:  CREATE TABLE products.wiki(
+	   	id 			uuid DEFAULT uuid_generate_v4 (),
+	   	image 		varchar not null,
+	   	name 		varchar not null,
+	 	description varchar not null,
+	 	primary key id
+	)
+2020-07-11 11:46:41.445 -03 [10750] LOG:  starting PostgreSQL 12.3 on x86_64-apple-darwin18.7.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.17), 64-bit
+2020-07-11 11:46:41.446 -03 [10750] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2020-07-11 11:46:41.446 -03 [10750] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-07-11 11:46:41.447 -03 [10750] LOG:  could not bind IPv6 address "::1": Address already in use
+2020-07-11 11:46:41.447 -03 [10750] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-07-11 11:46:41.447 -03 [10750] WARNING:  could not create listen socket for "localhost"
+2020-07-11 11:46:41.447 -03 [10750] FATAL:  could not create any TCP/IP sockets
+2020-07-11 11:46:41.447 -03 [10750] LOG:  database system is shut down
+2020-07-11 11:47:13.636 -03 [10781] LOG:  starting PostgreSQL 12.3 on x86_64-apple-darwin18.7.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.17), 64-bit
+2020-07-11 11:47:13.638 -03 [10781] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2020-07-11 11:47:13.638 -03 [10781] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-07-11 11:47:13.638 -03 [10781] LOG:  could not bind IPv6 address "::1": Address already in use
+2020-07-11 11:47:13.638 -03 [10781] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-07-11 11:47:13.638 -03 [10781] WARNING:  could not create listen socket for "localhost"
+2020-07-11 11:47:13.638 -03 [10781] FATAL:  could not create any TCP/IP sockets
+2020-07-11 11:47:13.638 -03 [10781] LOG:  database system is shut down
+2020-07-11 11:48:21.988 -03 [10870] LOG:  starting PostgreSQL 12.3 on x86_64-apple-darwin18.7.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.17), 64-bit
+2020-07-11 11:48:21.989 -03 [10870] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2020-07-11 11:48:21.989 -03 [10870] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-07-11 11:48:21.989 -03 [10870] LOG:  could not bind IPv6 address "::1": Address already in use
+2020-07-11 11:48:21.989 -03 [10870] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-07-11 11:48:21.989 -03 [10870] WARNING:  could not create listen socket for "localhost"
+2020-07-11 11:48:21.989 -03 [10870] FATAL:  could not create any TCP/IP sockets
+2020-07-11 11:48:21.990 -03 [10870] LOG:  database system is shut down

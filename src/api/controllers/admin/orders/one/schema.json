@@ -1,0 +1,4 @@
+{
+    "tags": ["Orders"],
+    "summary": "Get single order by id"
+}

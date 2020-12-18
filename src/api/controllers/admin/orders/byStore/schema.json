@@ -1,0 +1,20 @@
+{
+    "tags": ["Orders"],
+    "summary": "Get All orders by store id",
+    "security": [{
+        "appToken": []
+    }],
+    "querystring": {
+        "type": "object",
+        "properties": {
+            "status": {
+                "type": "string"
+            }
+        }
+    },
+    "params": {
+        "storeId": {
+            "type": "string"
+        }
+    }
+}
